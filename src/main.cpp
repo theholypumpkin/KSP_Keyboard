@@ -317,9 +317,9 @@ void pushButtonsWasPressed(std::map<uint8_t, MCP23X17_Button> &map){
     auto button = b.second;
 
     if(button.wasPressed()){
-      Keyboard.press(key);
+      //Keyboard.press(key);
       delay(1);
-      Keyboard.release(key);
+      //Keyboard.release(key);
     } 
   }
 }
@@ -331,10 +331,10 @@ void holdButtonsIsPressed(std::map<uint8_t, MCP23X17_Button> &map){
     auto button = b.second;
 
     if(button.isPressed()){
-      Keyboard.press(key);
+      //Keyboard.press(key);
     }
     else if(button.wasReleased()){
-      Keyboard.release(key);
+      //Keyboard.release(key);
     } 
   }
 }
@@ -346,9 +346,9 @@ void toggleButtonsChanged(std::map<uint8_t, MCP23X17_ToggleButton> &map){
     auto button = b.second;
 
     if(button.changed()){
-      Keyboard.press(key);
+      //Keyboard.press(key);
       delay(1);
-      Keyboard.release(key);
+      //Keyboard.release(key);
     } 
   }
 }
